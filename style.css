@@ -1,0 +1,38 @@
+body {
+    font-family: 'Matgefo Vintage', sans-serif; /* Corrected font family */
+}
+#about {
+    display: none;
+}
+.dark-mode {
+    background-color: #2F3651;
+    color: #8EBBFF;
+}
+.dark-mode .bg-white {
+    background-color: #24293E;
+}
+.dark-mode .text-blue-600 {
+    color: #8EBBFF;
+}
+.dark-mode .text-gray-800 {
+    color: #8EBBFF;
+}
+.dark-mode .hover\:bg-gray-200:hover {
+    background-color: #8EBBFF;
+}
+.bg-travel {
+    background: linear-gradient(135deg, #24293E, #2F3651, #8EBBFF);
+    background-size: cover;
+    background-position: center;
+}
+.fade-in {
+    animation: fadeIn 2s ease-in-out;
+}
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+.custom-font {
+    font-family: 'Matgefo Vintage', sans-serif;
+    color: #8EBBFF;
+}

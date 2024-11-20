@@ -1,0 +1,48 @@
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>TravelBot</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Matgefo+Vintage:wght@400;700&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body class="bg-travel min-h-screen flex flex-col">
+    <header class="bg-opacity-90 p-4 flex justify-between items-center flex-wrap bg-white dark:bg-gray-800">
+        <div class="logo flex items-center gap-2">
+            <img alt="TravelBot Logo - A friendly robot with a suitcase" height="40" src="https://storage.googleapis.com/a1aa/image/7PvCzcfBnkQqOK9kj2bUSfw2Unu5XfssCwYfib8YhlHmNdHPB.jpg" width="40"/>
+            <span class="logo-text text-2xl font-bold text-blue-600 dark:text-blue-400">TravelBot</span>
+        </div>
+        <nav class="flex gap-4 items-center" aria-label="Main Navigation">
+            <a class="nav-link text-gray-800 dark:text-gray-200 hover:bg-gray-200 dark:hover:bg-gray-600 px-3 py-2 rounded" href="javascript:void(0);" onclick="showHomePage()" aria-label="Home">Home</a>
+            <a class="nav-link text-gray-800 dark:text-gray-200 hover:bg-gray-200 dark:hover:bg-gray-600 px-3 py-2 rounded" href="javascript:void(0);" onclick="showAboutSection()" aria-label="About">About</a>
+            <a class="nav-link text-gray-800 dark:text-gray-200 hover:bg-gray-200 dark:hover:bg-gray-600 px-3 py-2 rounded" href="https://github.com/Jayasurya-2" target="_blank" rel="noopener" aria-label="GitHub">
+                <i class="fab fa-github"></i>
+            </a>
+            <button id="toggle-button" class="nav-link text-gray-800 dark:text-gray-200 hover:bg-gray-200 dark:hover:bg-gray-600 px-3 py-2 rounded" onclick="toggleDarkMode()" aria-label="Toggle Dark Mode">
+                <i class="fas fa-adjust"></i>
+            </button>
+        </nav>
+    </header>
+    <main class="flex-grow flex justify-center items-center p-6 fade-in" id="main-content">
+        <div class="welcome-section text-center max-w-4xl w-full p-8">
+            <h1 class="text-5xl text-blue-600 dark:text-blue-400 mb-6">Welcome to TravelBot</h1>
+            <p class="text-lg mb-8 custom-font">Start exploring TravelBot by looking for tourist destinations in different places for your vacation needs. You can get useful information from this TravelBot. Start pressing the Plan Your Trip button to start asking our chatbot.</p>
+            <a class="cta-button bg-blue-600 text-white px-8 py-4 rounded font-bold hover:bg-blue-700 transition" href="nextpage.html" aria-label="Plan Your Trip">Plan Your Trip</a>
+        </div>
+    </main>
+    <section class="flex-grow flex justify-center items-center p-6 fade-in" id="about">
+        <div class="text-center max-w-4xl w-full p-8">
+            <h2 class="text-4xl text-blue-600 dark:text-blue-400 mb-6">About TravelBot</h2>
+            <p class="text-lg mb-8 custom-font">TravelBot is your ultimate travel companion, designed to help you discover and plan your perfect vacation. Whether you're looking for popular tourist destinations, hidden gems, or travel tips, TravelBot has got you covered. Our chatbot is equipped with the latest information to ensure you have a memorable and hassle-free travel experience.</p>
+        </div>
+    </section>
+    <footer class="bg-opacity-90 text-center p-4 mt-auto bg-white dark:bg-gray-800">
+        <p class="text-gray-800 dark:text-gray-200">© 2024 TravelBot. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

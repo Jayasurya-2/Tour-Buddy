@@ -1,0 +1,39 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Ensures the body takes at least the full height of the viewport */
+    position: relative; /* Make body a positioning context */
+}
+main {
+    flex: 1; /* Allows the main section to grow and take up available space */
+    padding: 1rem; /* Add padding for main content */
+}
+#chatbot {
+    display: none; /* Initially hide the chatbot */
+    position: absolute; /* Position it absolutely */
+    bottom: 60px; /* Position above the footer */
+    left: 20px; /* Position from the left */
+    width: 40%; /* Set a larger width for the chatbot */
+    height: 80%; /* Set a larger height for the chatbot */
+    border-radius: 20px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional shadow for better visibility */
+}
+#chatbot-toggle {
+    position: absolute; /* Position the toggle button */
+    bottom: 10px; /* Position it above the chatbot */
+    left: 20px; /* Align with chatbot */
+    margin-bottom: 50px;
+}
+.list-container {
+    display: flex;
+    justify-content: flex-end; /* Aligns items to the right */
+    padding: 1rem; /* Optional: Add some padding around the list */
+}
+
+.chatbot-iframe {
+    height: 100%;
+    width: 100%;
+    border-radius: 20px;
+    border: none; /* Ensures no border is displayed */
+}

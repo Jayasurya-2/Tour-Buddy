@@ -1,0 +1,62 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TravelBot</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    
+</head>
+<body class="bg-blue-50">
+    <header class="bg-opacity-90 p-4 flex justify-between items-center flex-wrap bg-white dark:bg-gray-800">
+        <div class="logo flex items-center gap-2">
+            <img alt="TravelBot Logo - A friendly robot with a suitcase" height="40" src="https://storage.googleapis.com/a1aa/image/7PvCzcfBnkQqOK9kj2bUSfw2Unu5XfssCwYfib8YhlHmNdHPB.jpg" width="40"/>
+            <span class="logo-text text-2xl font-bold text-blue-600 dark:text-blue-400">TravelBot</span>
+        </div>
+        <nav class="flex gap-4 items-center" aria-label="Main Navigation">
+            <a class="nav-link text-gray-800 dark:text-gray-200 hover:bg-gray-200 dark:hover:bg-gray-600 px-3 py-2 rounded" href="index.html" aria-label="Home">Home</a>
+            <a class="nav-link text-gray-800 dark:text-gray-200 hover:bg-gray-200 dark:hover:bg-gray-600 px-3 py-2 rounded" href="javascript:void(0);" onclick="showAboutSection()" aria-label="About">About</a>
+            <a class="nav-link text-gray-800 dark:text-gray-200 hover:bg-gray-200 dark:hover:bg-gray-600 px-3 py-2 rounded" href="https://github.com/Jayasurya-2" target="_blank" rel="noopener" aria-label="GitHub">
+                <i class="fab fa-github"></i>
+            </a>
+            <button id="toggle-button" class="nav-link text-gray-800 dark:text-gray-200 hover:bg-gray-200 dark:hover:bg-gray-600 px-3 py-2 rounded" onclick="toggleDarkMode()" aria-label="Toggle Dark Mode">
+                <i class="fas fa-adjust"></i>
+            </button>
+        </nav>
+    </header>
+    <header class="bg-blue-600 text-white p-4">
+        <div class="header-content flex justify-between items-center">
+            <h1 class="text-2xl font-bold">Hi! Welcome to <span class="highlight">TravelBot</span></h1>
+            <div class="header-right">
+                <a href="https://www.google.com/maps?q=${latitude},${longitude}" class="Location text-white underline">Location</a>
+            </div>
+        </div>
+    </header>
+
+    
+    <main>
+        <h1 class="text-xl font-bold">Ask TripAdvisor for Suggestions</h1>
+        <input type="text" id="userInput" class="border p-2 w-1/4 mt-2" placeholder="Enter a city, town..."> <br>
+        <button onclick="fetchTravelSuggestions()" class="mt-2 bg-blue-600 text-white p-2 rounded">Submit</button>
+
+        <ul id="suggestions" class="mt-4 p-4 border rounded bg-white w-1/4"> <!-- Changed w-1/2 to w-1/4 -->
+        </ul>
+    </main>
+
+    <div id="chatbot" class="chatbot-container">
+        <iframe
+            class="chatbot-iframe"
+            src="https://www.chatbase.co/chatbot-iframe/8fnbj0GdF48lpWn3GtNMd"
+            title="Google Map Location">
+        </iframe>
+    </div>
+    
+    <footer class="bg-blue-600 text-white text-center p-4">
+        "Journey Beyond the Map."
+    </footer>
+    
+    <script src="scripts.js"> </script>
+</body>
+</html>
